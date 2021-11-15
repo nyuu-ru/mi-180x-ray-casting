@@ -32,6 +32,9 @@ public:
 	virtual ~Window() = default;
 
 	void main_loop();
+
+	int width() const { return _width; }
+	int height() const { return _height; }
 };
 
 #endif /* WINDOW_H_ */

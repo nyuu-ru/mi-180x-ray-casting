@@ -25,6 +25,10 @@ private:
 	static constexpr int MINIMAP_CELL_SIZE = 64;
 	static constexpr int PLAYER_DOT_SIZE = 11;
 	static constexpr int PLAYER_ARROW_SIZE = 40;
+
+	void draw_minimap();
+	void draw_player();
+
 protected:
 	virtual void render() override;
 	virtual void handle_keys(const Uint8 *keys) override;

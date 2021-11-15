@@ -19,6 +19,7 @@ public:
 private:
 	double _x {}, _y {}, _dir {};
 	std::shared_ptr<Map> _map;
+	double _fov { acos(-1.0) / 3.0 };
 
 public:
 	Player() = default;
@@ -29,6 +30,7 @@ public:
 	double dir() const { return _dir; }
 	double x() const   { return _x;   }
 	double y() const   { return _y;   }
+	double fov() const { return _fov; }
 
 	void walk_forward (double dist  = WALK_STEP);
 	void walk_backward(double dist  = WALK_STEP);
@@ -36,6 +38,8 @@ public:
 	void shift_right  (double dist  = WALK_STEP);
 	void turn_right   (double angle = TURN_STEP);
 	void turn_left    (double angle = TURN_STEP);
+
+	void set_fov(double fov);
 };
 
 #endif /* PLAYER_H_ */

@@ -62,5 +62,10 @@ void Player::turn_left(double angle)
 		_dir += 2.0 * Pi;
 }
 
+void Player::set_fov(double fov)
+{
+	if (fov < Pi/18.0) return;
+	if (fov > 2.0 * Pi / 3.0) return;
+	_fov = fov;
 
-
+}
